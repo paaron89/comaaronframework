@@ -8,13 +8,14 @@ public class LoginTest extends BasicTest {
 
     //TestCases for Login
 
+    String loginSite = "http://store.demoqa.com/products-page/your-account/";
+
 
     @Test
     public void loginTest() {
 
         LoginPage login = new LoginPage(driver);
-
-        driver.get("http://store.demoqa.com/products-page/your-account/");
+        driver.get(loginSite);
         login.login("username", "password");
 
 
@@ -25,8 +26,7 @@ public class LoginTest extends BasicTest {
     public void loginTest2() {
 
         LoginPage login = new LoginPage(driver);
-
-        driver.get("http://store.demoqa.com/products-page/your-account/");
+        driver.get(loginSite);
         login.login("kacsa", "máj");
 
 
