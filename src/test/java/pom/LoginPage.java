@@ -13,13 +13,13 @@ public class LoginPage {
     WebDriver driver;
 
     @FindBy(id = "log")
-    public WebElement usernameField;
+    private WebElement usernameField;
 
     @FindBy(id = "pwd")
-    public WebElement passwordField;
+    private WebElement passwordField;
 
     @FindBy(id = "login")
-    public WebElement loginButton;
+    private WebElement loginButton;
 
 
 
