@@ -18,6 +18,9 @@ public class LoginPage {
     @FindBy(id = "pwd")
     public WebElement passwordField;
 
+    @FindBy(id = "login")
+    public WebElement loginButton;
+
 
 
     //Builds webelements
