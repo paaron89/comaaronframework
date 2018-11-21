@@ -35,12 +35,13 @@ public class LoginPage {
     public void login(String username, String password) {
         System.out.println("login service started");
 
-
+//TODO implement waits
         usernameField.clear();
         usernameField.sendKeys(username);
 
         passwordField.clear();
         passwordField.sendKeys(password);
+        loginButton.click();
 
 
     }
