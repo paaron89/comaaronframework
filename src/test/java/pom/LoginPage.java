@@ -1,20 +1,20 @@
 package pom;
 
 
+import core.Waits;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 public class LoginPage {
 
 
-    WebDriver driver;
-    String responseText;
+    public WebDriver driver;
+
+    private String responseText;
 
 
     @FindBy(id = "log")
@@ -38,6 +38,9 @@ public class LoginPage {
 
     //Login service
     public String login(String username, String password) {
+
+        Waits wait = new Waits(driver);
+
         System.out.println("login service started");
 
         usernameField.clear();
@@ -46,20 +49,14 @@ public class LoginPage {
         passwordField.sendKeys(password);
         loginButton.click();
 
-//TODO implement Waits Class it's a bit messy here
         WebElement response = driver.findElement(By.xpath("//p[@class='response']"));
-        WebDriverWait wait = new WebDriverWait(driver, 5);
-        wait.until(ExpectedConditions.visibilityOf(response));
-        String responseText = response.getText();
+        wait.waitUntilVisible(response);
+        responseText = response.getText();
         System.out.println("Response is: " + responseText);
 
 
         return responseText;
     }
 
-    public String loginText() {
 
-        System.out.println("responseText is: " + responseText);
-        return responseText;
-    }
 }

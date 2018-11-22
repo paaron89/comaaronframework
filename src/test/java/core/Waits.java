@@ -4,10 +4,18 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import pom.LoginPage;
 
-public abstract class Waits {
+import javax.xml.stream.events.Attribute;
 
-    WebDriver driver;
+public class Waits extends LoginPage {
+
+    //Class of Waits
+
+
+    public Waits(WebDriver driver) {
+        super(driver);
+    }
 
     public void waitUntilClickable(WebElement webelement) {
         WebDriverWait wait = new WebDriverWait(driver, 5);
@@ -26,5 +34,13 @@ public abstract class Waits {
         wait.until(ExpectedConditions.alertIsPresent());
 
     }
+
+
+    //TODO pls rethink this idea
+   /* public void waitUntilAttributenotEmpty(WebElement element, Attribute href) {
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.attributeToBeNotEmpty(element, "href"));
+    }*/
+
 
 }
