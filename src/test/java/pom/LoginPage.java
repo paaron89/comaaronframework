@@ -57,9 +57,5 @@ public class LoginPage {
         return responseText;
     }
 
-    public String loginText() {
 
-        System.out.println("responseText is: " + responseText);
-        return responseText;
-    }
 }

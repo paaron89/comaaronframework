@@ -75,8 +75,5 @@ public class BasicTest {
 
 
 
-   /*@AfterTest
-   public void teardown(){
-       drivermanager.driverQuit();
-   }*/
+
 
