@@ -26,6 +26,9 @@ public class LoginPage {
     @FindBy(id = "login")
     private WebElement loginButton;
 
+    @FindBy(xpath = "//p[@class='response']")
+    private WebElement response;
+
 
     //Builds webelements
 
@@ -48,8 +51,6 @@ public class LoginPage {
         passwordField.clear();
         passwordField.sendKeys(password);
         loginButton.click();
-
-        WebElement response = driver.findElement(By.xpath("//p[@class='response']"));
         wait.waitUntilVisible(response);
         responseText = response.getText();
         System.out.println("Response is: " + responseText);
