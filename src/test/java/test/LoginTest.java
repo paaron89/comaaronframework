@@ -18,6 +18,7 @@ public class LoginTest extends BasicTest {
 
     @Test
     public void loginTest() {
+        System.out.println("LoginTest driver is: " + driver);
 
         LoginPage login = new LoginPage(driver);
         driver.get(loginSite);

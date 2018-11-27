@@ -41,7 +41,7 @@ public class LoginPage {
 
     //Login service
     public String login(String username, String password) {
-
+        System.out.println("LoginPage driver is: " + driver);
         Waits wait = new Waits(driver);
 
         System.out.println("login service started");

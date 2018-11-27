@@ -27,6 +27,7 @@ public class Waits extends LoginPage {
     public void waitUntilVisible(WebElement element) {
         WebDriverWait wait = new WebDriverWait(driver, 5);
         wait.until(ExpectedConditions.visibilityOf(element));
+        System.out.println("Waits driver is: " + driver);
     }
 
     public void alertPresented(WebElement element) {
