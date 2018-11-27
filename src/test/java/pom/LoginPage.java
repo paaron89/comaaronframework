@@ -2,14 +2,13 @@ package pom;
 
 
 import core.Waits;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 
-public class LoginPage {
+public class LoginPage extends MainPOM {
 
 
     public WebDriver driver;
@@ -29,10 +28,10 @@ public class LoginPage {
     @FindBy(xpath = "//p[@class='response']")
     private WebElement response;
 
-
-    //Builds webelements
-
     public LoginPage(WebDriver driver) {
+        super(driver);
+
+
         this.driver = driver;
         PageFactory.initElements(driver, this);
 

@@ -4,11 +4,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import pom.LoginPage;
+import pom.MainPOM;
 
-import javax.xml.stream.events.Attribute;
-
-public class Waits extends LoginPage {
+public class Waits extends MainPOM {
 
     //Class of Waits
 
