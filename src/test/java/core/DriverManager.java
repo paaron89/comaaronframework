@@ -25,7 +25,7 @@ public abstract class DriverManager {
             createWebDriver();
 
         }
-        System.out.println("DriverManager driver is: " + driver);
+        //System.out.println("DriverManager driver is: " + driver);
         return driver;
     }
 

@@ -1,6 +1,7 @@
 package test;
 
 
+import core.Log;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pom.LoginPage;
@@ -18,12 +19,15 @@ public class LoginTest extends BasicTest {
 
     @Test
     public void loginTest() {
-        System.out.println("LoginTest driver is: " + driver);
+        Log.startTestCase("loginTest 1");
+       // System.out.println("LoginTest driver is: " + driver);
 
         LoginPage login = new LoginPage(driver);
         driver.get(loginSite);
 
-        Assert.assertEquals(login.login("username","password"),expectedResponseText);
+        Assert.assertEquals(login.login("username", "password"), expectedResponseText);
+
+        Log.endTestCase("loginTest1");
 
     }
 
@@ -34,7 +38,7 @@ public class LoginTest extends BasicTest {
 
         LoginPage login = new LoginPage(driver);
         driver.get(loginSite);
-        Assert.assertEquals(login.login("username","password"),expectedResponseText);
+        Assert.assertEquals(login.login("username", "password"), expectedResponseText);
 
 
     }

@@ -25,7 +25,7 @@ public class Waits extends MainPOM {
     public void waitUntilVisible(WebElement element) {
         WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.visibilityOf(element));
-        System.out.println("Waits driver is: " + driver);
+        //System.out.println("Waits driver is: " + driver);
     }
 
     public void alertPresented(WebElement element) {

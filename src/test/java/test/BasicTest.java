@@ -38,7 +38,7 @@ public class BasicTest {
 
         drivermanager = DriverFactory.getDriverManager();
         driver = drivermanager.getWebDriver();
-        System.out.println("BasicTest driver is: " + driver);
+        //System.out.println("BasicTest driver is: " + driver);
     }
 
     //Quits Driver After Tests

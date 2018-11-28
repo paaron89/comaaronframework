@@ -9,7 +9,7 @@ public class MainPOM {
 
     public  MainPOM(WebDriver driver) {
         this.driver = driver;
-        System.out.println("MainPOM driver is: " + driver);
+        //System.out.println("MainPOM driver is: " + driver);
        // PageFactory.initElements(driver, this);
 
     }
