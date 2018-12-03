@@ -43,7 +43,6 @@ public class LoginPage extends MainPOM {
         //System.out.println("LoginPage driver is: " + driver);
         Waits wait = new Waits(driver);
 
-       // Log.info("login service started");
 
         usernameField.clear();
         usernameField.sendKeys(username);
