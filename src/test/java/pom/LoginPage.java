@@ -1,7 +1,6 @@
 package pom;
 
 
-import core.Log;
 import core.Waits;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -44,7 +43,7 @@ public class LoginPage extends MainPOM {
         //System.out.println("LoginPage driver is: " + driver);
         Waits wait = new Waits(driver);
 
-        Log.info("login service started");
+       // Log.info("login service started");
 
         usernameField.clear();
         usernameField.sendKeys(username);
