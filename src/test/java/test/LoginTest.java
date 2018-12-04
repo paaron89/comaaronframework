@@ -30,7 +30,7 @@ public class LoginTest extends BasicTest {
 
         Assert.assertEquals(login.login("username", "password"), expectedResponseText);
 
-        Log.startLog("Login");
+        Log.endLog("Login");
 
     }
 
