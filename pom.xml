@@ -23,7 +23,10 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.19.1</version>
                 <configuration>
-                    <testFailureIgnore>false</testFailureIgnore>
+                    <!--testFailureIgnore>false</testFailureIgnore-->
+                    <suiteXmlFiles>
+                        <suiteXmlFile>.\src\main\resources\testngSuite.xml</suiteXmlFile>
+                    </suiteXmlFiles>
                 </configuration>
             </plugin>
         </plugins>
