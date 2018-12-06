@@ -7,6 +7,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.Map;
+
 
 public class LoginPage extends MainPOM {
 
@@ -54,6 +56,23 @@ public class LoginPage extends MainPOM {
 
 
         return responseText;
+    }
+
+
+    public void loginDataProvider(String userName, String password) {
+        //System.out.println("LoginPage driver is: " + driver);
+        Waits wait = new Waits(driver);
+
+
+        usernameField.clear();
+        usernameField.sendKeys(userName);
+        passwordField.clear();
+        passwordField.sendKeys(password);
+        loginButton.click();
+        wait.waitUntilVisible(response);
+        responseText = response.getText();
+
+
     }
 
 

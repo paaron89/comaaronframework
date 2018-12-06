@@ -1,10 +1,13 @@
 package test;
 
 
+import com.qmetry.qaf.automation.testng.dataprovider.QAFDataProvider;
 import utilities.Log;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pom.LoginPage;
+
+import java.util.Map;
 
 public class LoginTest extends BasicTest {
 
@@ -45,4 +48,18 @@ public class LoginTest extends BasicTest {
 
 
     }
+    @QAFDataProvider(dataFile = ".\\src\\main\\resources\\loginTestData.txt")
+    @Test
+    //Same as loginTest with DataProvider
+    public void loginTest3DataProvider(Map<String, String> data) {
+
+        LoginPage login = new LoginPage(driver);
+        driver.get(loginSite);
+
+        login.loginDataProvider(data.get("UserName"), data.get("Password"));
+
+
+    }
+
+
 }
