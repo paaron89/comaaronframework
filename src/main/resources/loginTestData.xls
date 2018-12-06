@@ -1,0 +1,4 @@
+UserName	Password	ExpectedMessage
+teszt	teszt	ERROR: The password you entered for the username username is incorrect. Lost your password?
+paaron89	teszt	FailedTest
+dadada	jkjkjk	
