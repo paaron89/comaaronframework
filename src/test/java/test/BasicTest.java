@@ -43,9 +43,9 @@ public class BasicTest {
 
     @AfterMethod
     public  void teardDown (ITestResult result){
-        Date currentTime = Calendar.getInstance().getTime();
-        String currentTimeFormatted = new SimpleDateFormat("MM_dd_yy.HH-mm-ss").format(currentTime);
-        String filePath = ".\\screenshots\\" + result.getName() + " " + currentTimeFormatted + ".png";
+        /*Date currentTime = Calendar.getInstance().getTime();
+        String currentTimeFormatted = new SimpleDateFormat("MM_dd_yy.HH-mm-ss").format(currentTime);*/
+        String filePath = ".\\screenshots\\" + result.getName() + " " + Utilities.datePicker() + ".png";
 
         Log.info("Status of test is: " + result);
 
@@ -53,7 +53,7 @@ public class BasicTest {
         // System.out.println("Current time is: " + currentTimeFormatted);
 
         //using ITestResult.FAILURE is equals to result.getStatus then it enter into if condition
-        if (ITestResult.FAILURE == result.getStatus()) {
+        if (ITestResult.SUCCESS == result.getStatus()) {
             try {
 
                 Utilities.takeScreenshot(driver, filePath);

@@ -8,6 +8,9 @@ import utilities.Log;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
 public class Utilities {
 
@@ -24,5 +27,13 @@ public class Utilities {
         //DO NO CONCATENATE DATE FORMAT CONTAINING ":" ON WINDOWS!!!!!
         FileUtils.copyFile(src, new File(filePath));
         Log.info("Successfully captured a screenshot");
+    }
+
+    public static String datePicker(){
+
+        Date currentTime = Calendar.getInstance().getTime();
+        String currentTimeFormatted = new SimpleDateFormat("MM_dd_yy.HH-mm-ss").format(currentTime);
+
+        return currentTimeFormatted;
     }
 }
