@@ -59,7 +59,7 @@ public class LoginPage extends MainPOM {
     }
 
 
-    public void loginDataProvider(String userName, String password) {
+    public String  loginDataProvider(String userName, String password) {
         //System.out.println("LoginPage driver is: " + driver);
         Waits wait = new Waits(driver);
 
@@ -73,6 +73,7 @@ public class LoginPage extends MainPOM {
         responseText = response.getText();
 
 
+        return responseText;
     }
 
 

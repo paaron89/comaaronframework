@@ -1,3 +1,3 @@
-UserName,Password
-teszt,tesztPass
-dadsada,98987
+UserName,Password,ExpectedResultMsg
+teszt,tesztPass,ERROR: Invalid username. Lost your password?
+dadsada,98987,ERROR: Invalid username. Lost your password?
