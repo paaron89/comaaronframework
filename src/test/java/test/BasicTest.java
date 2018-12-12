@@ -53,7 +53,7 @@ public class BasicTest {
         // System.out.println("Current time is: " + currentTimeFormatted);
 
         //using ITestResult.FAILURE is equals to result.getStatus then it enter into if condition
-        if (ITestResult.SUCCESS == result.getStatus()) {
+        if (ITestResult.FAILURE == result.getStatus()) {
             try {
 
                 Utilities.takeScreenshot(driver, filePath);
